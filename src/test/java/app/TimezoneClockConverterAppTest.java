@@ -37,4 +37,19 @@ public class TimezoneClockConverterAppTest {
             app.run();
         });
     }
+
+    @Test
+    public void testUniqueRun() {
+        String input = "America/Los_Angeles\nEurope/London\n18:30:00\n";
+        InputStream in = new ByteArrayInputStream(input.getBytes());
+        System.setIn(in);
+
+        assertDoesNotThrow(() -> {
+            TimezoneConverterFactory factory = new DefaultTimezoneConverterFactory();
+            TimezoneConverter converter = factory.createTimezoneConverter();
+
+            TimezoneClockConverterApp app = new TimezoneClockConverterApp(converter);
+            app.run();
+        });
+    }
 }
