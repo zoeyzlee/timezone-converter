@@ -1,9 +1,8 @@
 // Test class for DefaultTimezoneConverterFactory
 package factory;
 
-import factory.DefaultTimezoneConverterFactory;
 import org.junit.jupiter.api.Test;
-import usecase.TimezoneConverter;
+import domain.model.TimezoneConverter;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 

@@ -1,6 +1,6 @@
 package factory;
 
-import usecase.TimezoneConverter;
+import domain.model.TimezoneConverter;
 
 /**
  * Represents a factory interface for creating TimezoneConverter instances.

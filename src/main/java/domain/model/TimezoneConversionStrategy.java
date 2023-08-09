@@ -1,4 +1,4 @@
-package strategy;
+package domain.model;
 
 import java.time.LocalTime;
 

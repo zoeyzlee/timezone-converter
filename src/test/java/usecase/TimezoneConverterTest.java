@@ -1,9 +1,9 @@
 // Test class for TimezoneConverter
 package usecase;
 
+import domain.model.TimezoneConverter;
 import org.junit.jupiter.api.Test;
-import strategy.DefaultTimezoneConversionStrategy;
-import strategy.TimezoneConversionStrategy;
+import domain.model.TimezoneConversionStrategy;
 
 import java.time.LocalTime;
 

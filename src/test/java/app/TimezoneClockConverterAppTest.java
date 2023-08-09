@@ -1,12 +1,12 @@
 // Test class for TimezoneClockConverterApp
 package app;
 
-import app.TimezoneClockConverterApp;
+import main.TimezoneClockConverterApp;
 import factory.DefaultTimezoneConverterFactory;
 import factory.TimezoneConverterFactory;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import usecase.TimezoneConverter;
+import domain.model.TimezoneConverter;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
