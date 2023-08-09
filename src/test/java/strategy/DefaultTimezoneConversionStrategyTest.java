@@ -20,4 +20,18 @@ public class DefaultTimezoneConversionStrategyTest {
         String convertedTime = strategy.convertTimezone(sourceTimezone, targetTimezone, localTime);
         assertEquals("04:30 AM", convertedTime);
     }
+
+    @Test
+    public void testUniqueTimezone() {
+        DefaultTimezoneConversionStrategy strategy = new DefaultTimezoneConversionStrategy();
+
+        // Normal conversion
+        assertEquals("10:30 PM", strategy.convertTimezone("America/Los_Angeles", "Europe/London", LocalTime.of(18, 30, 0)));
+
+        // Edge case: Midnight conversion
+        assertEquals("05:00 AM", strategy.convertTimezone("Asia/Kolkata", "Pacific/Auckland", LocalTime.of(0, 30, 0)));
+
+        // Edge case: Noon conversion
+        assertEquals("06:00 AM", strategy.convertTimezone("Australia/Sydney", "Asia/Tokyo", LocalTime.of(12, 0, 0)));
+    }
 }
