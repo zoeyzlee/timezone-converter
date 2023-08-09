@@ -2,10 +2,7 @@ package app;
 
 import factory.DefaultTimezoneConverterFactory;
 import factory.TimezoneConverterFactory;
-import strategy.DefaultTimezoneConversionStrategy;
 import usecase.TimezoneConverter;
-import usecase.TimezoneConverterImpl;
-
 import java.time.LocalTime;
 import java.util.Scanner;
 
